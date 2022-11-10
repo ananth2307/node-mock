@@ -15,6 +15,8 @@ const getFlowEfficiency = require('./mockData/code/getFlowEfficiency');
 const getActiveSprints = require('./mockData/code/getActiveSprints');
 const getFlowLoad = require('./mockData/code/getFlowLoad');
 const getFlowEfficencyDrill = require('./mockData/code/getFlowEfficencyDrill')
+const getFlowPredicabilityDrill = require("./mockData/code/getFlowPredictablityDrill")
+const getFlowPredicabilityDrillSummary = require('./mockData/code/getFlowPredicabilityDrillSummary')
 app.use(bodyParser.json());
 
 const BASE_URL = "/api/v1"
@@ -47,6 +49,14 @@ app.post(`${BASE_URL}/safeFlowMetrics/flow/flowVelocity/main`, (req, res) => {
 
 app.post(`${BASE_URL}/safeFlowMetrics/flow/flowMetrics/ddflowpredicatablitymain`, (req, res) => {
   res.send(getFlowPredictability);
+})
+app.post(`${BASE_URL}/safeFlowMetrics/flow/flowMetrics/ddflowsummary`, async (req, res) => {
+  const response = await getFlowPredicabilityDrillSummary(req.body)
+  res.send(response);
+})
+app.post(`${BASE_URL}/safeFlowMetrics/flow/flowMetrics/ddflowpredicatablitymonth`, async (req, res) => {
+  const response = await getFlowPredicabilityDrill(req.body)
+  res.send(response);
 })
 
 app.post(`${BASE_URL}/safeFlowMetrics/flow/flowEfficiency/main`, (req, res) => {

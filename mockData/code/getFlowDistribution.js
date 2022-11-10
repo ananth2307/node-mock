@@ -67,14 +67,14 @@ const data = [
                     "sprintName": "ACPK Sprint 10.1_2022"
                 }
             },
-            {
-                "sprintName": "ACPK Sprint 10.1_2022",
-                "Story": 1,
-                "Storysummary": {
-                    "sprintName": "ACPK Sprint 10.1_2022",
-                    "ACPK-380": "As a user, I desire the Forgotten password option, which would allow me to quickly reset my password via email. "
-                }
-            }
+            // {
+            //     "sprintName": "ACPK Sprint 10.1_2022",
+            //     "Story": 1,
+            //     "Storysummary": {
+            //         "sprintName": "ACPK Sprint 10.1_2022",
+            //         "ACPK-380": "As a user, I desire the Forgotten password option, which would allow me to quickly reset my password via email. "
+            //     }
+            // }
         ]
     },
     {
