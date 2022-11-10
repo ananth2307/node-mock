@@ -6,10 +6,6 @@ const data = {
             "planned": 4
         },
         {
-            "sprintName": "ACPK Sprint 8.2_2022",
-            "planned": 1
-        },
-        {
             "actual": 7,
             "sprintName": "ACPK Sprint 9.1_2022",
             "planned": 19
