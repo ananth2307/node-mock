@@ -14,5 +14,19 @@ export const data = {
     test15: "test15",
     test16: "test16",
     test17: "test17",
-    test18: "test18",
+    test18: "test18"
 }
+export const testing = {
+    file1: "test1",
+    finally: "test"
+}
+//how about complete funnc
+const eventData = {
+    repository: {
+      owner: {
+        login: "your_username"
+      },
+      name: "your_repository"
+    },
+    after: "commit_sha_of_interest"
+  };

@@ -17,6 +17,12 @@ const getFlowLoad = require('./mockData/code/getFlowLoad');
 const getFlowEfficencyDrill = require('./mockData/code/getFlowEfficencyDrill')
 const getFlowPredicabilityDrill = require("./mockData/code/getFlowPredictablityDrill")
 const getFlowPredicabilityDrillSummary = require('./mockData/code/getFlowPredicabilityDrillSummary')
+const getIssueMetrics = require('./mockData/code/peopleMetrics/getIssueMetrics');
+const getCollabaration = require('./mockData/code/peopleMetrics/getCollabaration');
+const getCommentsDdOne = require('./mockData/code/peopleMetrics/getCommentsDdOne');
+const getTopAssignee = require('./mockData/code/peopleMetrics/getTopAssignee');
+const getIssueMetricsDdOne = require('./mockData/code/peopleMetrics/getIssueMetricsDdOne');
+
 app.use(bodyParser.json());
 
 const BASE_URL = "/api/v1"
@@ -74,6 +80,30 @@ app.post(`${BASE_URL}/safeFlowMetrics/flow/issueMetrics/activeSprints`, (req, re
 app.post(`${BASE_URL}/safeFlowMetrics/flow/flowMetrics/flowLoadMain`, (req, res) => {
   res.send(getFlowLoad);
 })
+
+//People Metrics
+
+app.post(`${BASE_URL}/home/issueMetrics`, (req, res) => {
+  res.send(getIssueMetrics);
+})
+
+app.post(`${BASE_URL}/home/level/collaboration`, (req, res) => {
+  res.send(getCollabaration);
+})
+
+app.post(`${BASE_URL}/safeFlowMetrics/flow/peopleMetric/topAssignee`, (req, res) => {
+  res.send(getTopAssignee);
+})
+
+app.post(`${BASE_URL}/safeFlowMetrics/flow/peopleMetric/comments/ddone`, (req, res) => {
+  res.send(getCommentsDdOne);
+})
+
+app.post(`${BASE_URL}/safeFlowMetrics/flow/issueMetrics/drillDownOne`, (req, res) => {
+  res.send(getIssueMetricsDdOne);
+})
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
