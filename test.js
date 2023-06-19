@@ -1,3 +1,3 @@
 export const data = {
-    test: "test1"
+    test: "test2"
 }
